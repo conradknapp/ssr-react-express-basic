@@ -8,7 +8,8 @@ yarn install
 yarn run dev
 ```
 
-Visit `http://localhost:3333`
+Visit `http://localhost:3000`
+
 
 Upon making changes run the command:
 
