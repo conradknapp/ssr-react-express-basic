@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Main Styles */
+
+    h1 {
+      color: green;
+    }
+
+    li {
+      margin: 2rem;
+    }
+  </style>
+  <title>SSR Rendered Posts</title>
+</head>
+
+<body>
+
+  <main id="root">
+    <!-- ::APP :: -->
+  </main>
+  <script type="text/javascript" src="bundle.js"></script>
+  <script async>
+    var titles = document.querySelectorAll('h1');
+
+    const getRandomColor = () => {
+      const len = 6;
+      const chars = '0123456789ABCDEF';
+      let hex = '#';
+      for (let i = 1; i <= len; i++) {
+        hex += chars[(Math.random() * 16) | 0];
+      }
+      return hex;
+    }
+
+    Array.from(titles).map(el => el.style.color = getRandomColor());
+  </script>
+</body>
+
+</html>
